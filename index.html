@@ -66,6 +66,7 @@
         h1 {
             font-weight: 900;
             margin-bottom: 0;
+            text-align: center;
         }
 
         header {
@@ -106,21 +107,123 @@
             margin-top: auto;
             margin-bottom: auto;
         }
+
+        #scroll-to-top {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        #scroll-to-top.show {
+            opacity: 1;
+        }
+
+        header, footer {
+            width: 100%;
+            background-color: black;
+            font-size: 22px;
+        }
+
+        footer ul li {
+            color: white;
+            font-size: 20px;
+            margin-left: 15px;
+        }
+        footer ul li a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        header ul, footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        header li {
+            padding-left: 25px;
+            padding-right: 25px;
+            height: 40px;
+        }
+
+        header li a {
+            display: block;
+            /*padding: 14px 25px 10px 25px;*/
+            text-transform: uppercase;
+            color: #6696fe !important;
+            text-decoration: none !important;
+            font-size: 24px;
+            /*margin: 20px;*/
+            font-weight: 300;
+            transition: all .25s;
+            border-bottom: 3px solid transparent;
+        }
+
+        header li.active a {
+            display: block;
+            /*padding: 14px 25px 10px 25px;*/
+            text-transform: uppercase;
+            color: #f44336 !important;
+            text-decoration: none !important;
+            font-size: 24px;
+            /*margin: 20px;*/
+            font-weight: 300;
+            transition: all .25s;
+            border-bottom: 3px solid #f44336;
+        }
+
+        header li a:hover {
+            display: block;
+            /*padding: 14px 25px 10px 25px;*/
+            text-transform: uppercase;
+            color: #f8982d !important;
+            text-decoration: none !important;
+            font-size: 24px;
+            /*margin: 20px;*/
+            font-weight: 300;
+            transition: all .25s;
+            border-bottom: 3px solid #f8982d;
+        }
     </style>
 </head>
 <body>
 <header>
-    <h1>BARL: Broadcast Assistant for Rocket League</h1>
+    <ul>
+        <li title="CARL: Analysis Tool for Rocket League">
+            <a href="https://lndrlndr.github.io/">CARL</a>
+        </li>
+        <li class="active" title="BARL: Broadcast Assistant for Rocket League">
+            <a href="https://lndrlndr.github.io/BARL-Overlay/">BARL</a>
+        </li>
+        <li title="Overlay Portfolio">
+            <a href="https://lndrlndr.github.io/portfolio/">OVERLAYS</a>
+        </li>
+        <!--        <li><a href="https://lndrlndr.github.io/overlays/">CLIENTS</a></li>-->
+        <li title="Check out my Twitter">
+            <a target="_blank" href="https://x.com/LNDRLNDRLNDR">TWITTER</a>
+        </li>
+        <li title="Send me an Email">
+            <a target="_blank" href="mailto:lndr.overlays@gmail.com">EMAIL</a>
+        </li>
+        <li title="Join the BARL Discord server">
+            <a target="_blank" href="https://discord.gg/qF5FkJxNdR">DISCORD</a>
+        </li>
+    </ul>
 </header>
 
+
 <main>
+    <h1>BARL: Broadcast Assistant for Rocket League</h1>
     <div class="video_box">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/qtbg9ZSGW6w?autoplay=1"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
-        <a href="https://discord.gg/KgP3PDDfRx" target="_blank" class="waves-effect waves-light btn discord-btn  btn-large"
+        <a href="https://discord.gg/KgP3PDDfRx" target="_blank"
+           class="waves-effect waves-light btn discord-btn  btn-large"
            rel="nofollow">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="discord-svg" viewBox="0 0 16 16">
                 <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
@@ -158,6 +261,14 @@
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
+        <a href="https://discord.gg/KgP3PDDfRx" target="_blank"
+           class="waves-effect waves-light btn discord-btn  btn-large"
+           rel="nofollow">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="discord-svg" viewBox="0 0 16 16">
+                <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
+            </svg>
+            <div>Join the Discord</div>
+        </a>
     </div>
     <h2>Customization at Its Finest</h2>
     <p>
@@ -195,10 +306,49 @@
         never before.
     </p>
 
-
     <div style="height: 35px;"></div>
 </main>
 
+<a id="scroll-to-top" href="#" class="btn-floating btn-large waves-effect waves-light red">
+    ^
+</a>
 
+<footer>
+    <ul>
+        Contact:
+        <li title="Follow me on Twitter">
+            Twitter: <a target="_blank" href="https://x.com/LNDRLNDRLNDR">@LNDRLNDRLNDR</a>
+        </li>
+        <li title="Send me an Email">
+            Email: <a target="_blank" href="mailto:lndr.overlays@gmail.com">lndr.overlays@gmail.com</a>
+        </li>
+        <li title="Talk to me on Discord">
+            Discord: <a target="_blank" href="https://discord.gg/qF5FkJxNdR">lndrlndrlndr</a>
+        </li>
+    </ul>
+</footer>
 </body>
+<script>
+  const scrollToTopButton = document.querySelector('#scroll-to-top');
+
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    const main = document.querySelector('main');
+    const mainPosition = main.offsetTop;
+
+    if (currentScroll > mainPosition) {
+      scrollToTopButton.classList.add('show');
+    } else {
+      scrollToTopButton.classList.remove('show');
+    }
+  });
+
+  scrollToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+</script>
 </html>
